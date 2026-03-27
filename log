@@ -24,3 +24,19 @@ list.c:40:10: error: ‘List’ {aka ‘struct List’} has no member named ‘t
    40 |     lista->talla=0;
       |          ^~
 f63915d
+Fri Mar 27 06:46:14 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:38:20: error: ‘Lista’ undeclared (first use in this function); did you mean ‘lista’?
+   38 |     List* lista = (Lista*)malloc(sizeof(List));
+      |                    ^~~~~
+      |                    lista
+list.c:38:20: note: each undeclared identifier is reported only once for each function it appears in
+list.c:38:26: error: expected expression before ‘)’ token
+   38 |     List* lista = (Lista*)malloc(sizeof(List));
+      |                          ^
+list.c:40:10: error: ‘List’ {aka ‘struct List’} has no member named ‘talla’
+   40 |     lista->talla=0;
+      |          ^~
+ff026ae
