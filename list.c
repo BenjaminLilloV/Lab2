@@ -51,8 +51,9 @@ void * firstList(List * lista) {
     return lista->head->data;
 }
 
-void * nextList(List * list) {
-    return NULL;
+void * nextList(List * lista) {
+    lista->current= lista->next;
+    return lista->current->data;
 }
 
 // 3. Programe las funciones void * lastList(List * list) y void * prevList(List * list).

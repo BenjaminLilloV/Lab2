@@ -179,3 +179,13 @@ Fri Mar 27 06:59:24 PM UTC 2026:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 af8adaa
+Fri Mar 27 07:01:50 PM UTC 2026: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:55:26: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   55 |     lista->current= lista->next;
+      |                          ^~
+5b9a615
