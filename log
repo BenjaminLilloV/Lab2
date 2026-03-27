@@ -131,3 +131,9 @@ test.c:426:9: error: ‘List’ {aka ‘struct List’} has no member named ‘t
   426 |     if(L->tail->next != NULL){
       |         ^~
 fd722d1
+Fri Mar 27 06:48:20 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  1|5
+total_score: 10/60
+f9c3313

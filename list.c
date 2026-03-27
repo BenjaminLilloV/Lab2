@@ -16,7 +16,7 @@ struct Node {
 
 struct List {
     Node * head;
-    Node * talla;
+    Node * tail;
     Node * current;
 };
 
@@ -37,7 +37,7 @@ Node * createNode(void * data) {
 List * createList() {
     List* lista = (List*)malloc(sizeof(List));
     lista->head=NULL;
-    lista->talla=0;
+    lista->tail=0;
     lista->current = NULL;
     return lista;
 }
