@@ -52,7 +52,7 @@ void * firstList(List * lista) {
 }
 
 void * nextList(List * lista) {
-    lista->current= lista->next;
+    lista->current= lista->current++;
     return lista->current->data;
 }
 

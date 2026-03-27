@@ -189,3 +189,14 @@ list.c:55:26: error: ‘List’ {aka ‘struct List’} has no member named ‘n
    55 |     lista->current= lista->next;
       |                          ^~
 5b9a615
+Fri Mar 27 07:05:34 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:55:19: error: operation on ‘lista->current’ may be undefined [-Werror=sequence-point]
+   55 |     lista->current= lista->current++;
+      |     ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+21689a2
