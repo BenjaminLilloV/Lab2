@@ -264,3 +264,19 @@ Sat Mar 28 01:24:05 PM UTC 2026:
  tests:  5|4
 total_score: 20/60
 cafcb28
+Sat Mar 28 01:31:52 PM UTC 2026: 
+ list.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:75:5: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   75 |     lista->current = lista->current->prev;
+      |     ^~~~~
+      |     list
+list.c:75:5: note: each undeclared identifier is reported only once for each function it appears in
+list.c:77:1: error: control reaches end of non-void function [-Werror=return-type]
+   77 | }
+      | ^
+cc1: all warnings being treated as errors
+ee3cb62

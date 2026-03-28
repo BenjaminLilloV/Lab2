@@ -62,12 +62,18 @@ void * nextList(List * lista) {
 //   - La primera retorna el dato del último elemento en la lista y actualiza el current al nodo correspondiente.
 //   - La segunda función retorna el dato del nodo anterior a current y actualiza el current para que apunte a ese nodo.
 
-void * lastList(List * list) {
-    return NULL;
+void * lastList(List * lista) {
+    while(lista->current->next != NULL){
+        lista->current = lista->current->next;
+
+    }
+    
+    return lista->current->data;
 }
 
 void * prevList(List * list) {
-    return NULL;
+    lista->current = lista->current->prev;
+    return lista->current->data;
 }
 
 // 4. Programe la función void pushFront(List * list, void * data), la cual agrega un dato al comienzo de la lista.
