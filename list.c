@@ -132,11 +132,15 @@ void * popCurrent(List * lista) {
     
     void *dataEliminada = lista->current->data;
     if(lista->current == lista->head){
-        popFront(lista);
+        lista->current->prev = NULL;
+        lista->current = list->current->next;
+        list->current->next = current->next 
         return dataEliminada;
     }    
     if(lista->current == lista->tail){
-         popBack(lista);
+        lista->current->next = NULL;
+        lista->current = list->current->prev;
+        list->current->prev = current->prev 
         return dataEliminada;
     }
 
