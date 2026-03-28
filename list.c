@@ -72,7 +72,7 @@ void * lastList(List * lista) {
 }
 
 void * prevList(List * lista) {
-    if(lista == NULL|| lista->current->prev || lista->current == NULL) return NULL;
+    if(lista == NULL|| lista->current->prev == NULL || lista->current == NULL) return NULL;
     lista->current = lista->current->prev;
     return lista->current->data;
 }
