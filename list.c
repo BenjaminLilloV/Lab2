@@ -133,14 +133,14 @@ void * popCurrent(List * lista) {
     void *dataEliminada = lista->current->data;
     if(lista->current == lista->head){
         lista->current->prev = NULL;
-        lista->current = list->current->next;
-        list->current->next = current->next; 
+        lista->current = lista->current->next;
+        lista->current->next = lista->current->next; 
         return dataEliminada;
     }    
     if(lista->current == lista->tail){
         lista->current->next = NULL;
-        lista->current = list->current->prev;
-        list->current->prev = current->prev ;
+        lista->current = lista->current->prev;
+        lista->current->prev = lista->current->prev ;
         return dataEliminada;
     }
 
