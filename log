@@ -391,3 +391,17 @@ Sat Mar 28 05:08:35 PM UTC 2026:
  tests:  11|1
 total_score: 50/60
 4063bc3
+Sat Mar 28 05:13:59 PM UTC 2026: 
+ list.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:137:18: error: ‘Node’ has no member named ‘derecha’
+  137 |     list->current->derecha;
+      |                  ^~
+list.c:139:1: error: control reaches end of non-void function [-Werror=return-type]
+  139 | }
+      | ^
+cc1: all warnings being treated as errors
+06c1ad5
