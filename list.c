@@ -131,7 +131,7 @@ void * popCurrent(List * lista) {
     if (lista == NULL || lista->current == NULL) return NULL;
     
     void *dataEliminada = lista->current->data;
-    Node *nodoAEliminar = lista->current;
+    Node *nodoABorrar = lista->current;
     
     if (lista->head == lista->tail) { 
         lista->head = NULL;

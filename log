@@ -643,3 +643,13 @@ list.c:134:11: error: unused variable ‘nodoAEliminar’ [-Werror=unused-variab
       |           ^~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 cab6144
+Sat Mar 28 06:15:30 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:155:20: error: ‘Node’ has no member named ‘nodoABorrar’
+  155 |     lista->current ->nodoABorrar->next;
+      |                    ^~
+0a63d68
