@@ -603,3 +603,19 @@ list.c:143:44: error: expected ‘;’ before ‘return’
   144 |         return dataEliminada;
       |         ~~~~~~                              
 f661974
+Sat Mar 28 06:09:38 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:136:26: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+  136 |         lista->current = list->current->next;
+      |                          ^~~~
+      |                          List
+list.c:136:26: note: each undeclared identifier is reported only once for each function it appears in
+list.c:137:31: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  137 |         list->current->next = current->next;
+      |                               ^~~~~~~
+      |                               popCurrent
+424853c
