@@ -52,7 +52,7 @@ void * firstList(List * lista) {
 }
 
 void * nextList(List * lista) {
-    if(lista->curret != NULL) lista->current= lista->current->next;
+    if(lista->current != NULL) lista->current= lista->current->next;
     if(lista->current != NULL) return lista->current;
     return NULL;
 }
