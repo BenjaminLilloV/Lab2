@@ -216,3 +216,14 @@ Sat Mar 28 12:55:03 PM UTC 2026:
  1 file changed, 1 insertion(+)
  tests:  0|0
 94cdb23
+Sat Mar 28 01:19:26 PM UTC 2026: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:55:15: error: ‘List’ {aka ‘struct List’} has no member named ‘curret’; did you mean ‘current’?
+   55 |     if(lista->curret != NULL) lista->current= lista->current->next;
+      |               ^~~~~~
+      |               current
+13611db

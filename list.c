@@ -52,9 +52,9 @@ void * firstList(List * lista) {
 }
 
 void * nextList(List * lista) {
-    if (lista == NULL) return NULL;
-    lista->current= lista->current->next;
-    return lista->current->data;
+    if(lista->curret != NULL) lista->current= lista->current->next;
+    if(lista->current != NULL) return lista->current;
+    return NULL;
 }
 
 // 3. Programe las funciones void * lastList(List * list) y void * prevList(List * list).
