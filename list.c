@@ -131,30 +131,29 @@ void * popCurrent(List * lista) {
     if (lista == NULL || lista->current == NULL) return NULL;
     
     void *dataEliminada = lista->current->data;
-    if(lista->current == lista->head){
-        lista->current->prev = NULL;
-        lista->current = lista->current->next;
-        lista->current->next = lista->current->next; 
-        return dataEliminada;
-    }    
-    if(lista->current == lista->tail){
-        lista->current->next = NULL;
-        lista->current = lista->current->prev;
-        lista->current->prev = lista->current->prev ;
-        return dataEliminada;
+    Node *nodoAEliminar = lista->current;
+    
+    if (lista->head == lista->tail) { 
+        lista->head = NULL;
+        lista->tail = NULL;
     }
 
-    
-    Node* izquierda = lista->current->prev;
-    Node* derecha = lista->current->next;
-    
-    izquierda->next = derecha;
-    derecha->prev = izquierda;
+    else if (nodoABorrar == lista->head) { 
+        lista->head = nodoABorrar->next;
+        lista->head->prev = NULL;
+    }
 
+    else if (nodoABorrar == lista->tail) { 
+        lista->tail = nodoABorrar->prev;
+        lista->tail->next = NULL;
+    }
+    else { 
+        nodoABorrar->prev->next = nodoABorrar->next;
+        nodoABorrar->next->prev = nodoABorrar->prev;
+    }
     
-    lista->current = derecha;
-    free(lista->current);
-
+    lista->current ->nodoABorrar->next;
+    free(nodoABorrar);
     return dataEliminada;
         
 }

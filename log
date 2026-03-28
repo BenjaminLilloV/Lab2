@@ -625,3 +625,21 @@ Sat Mar 28 06:10:03 PM UTC 2026:
  tests:  11|1
 total_score: 50/60
 68b78b3
+Sat Mar 28 06:15:08 PM UTC 2026: 
+ list.c | 39 +++++++++++++++++++--------------------
+ 1 file changed, 19 insertions(+), 20 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:141:14: error: ‘nodoABorrar’ undeclared (first use in this function)
+  141 |     else if (nodoABorrar == lista->head) {
+      |              ^~~~~~~~~~~
+list.c:141:14: note: each undeclared identifier is reported only once for each function it appears in
+list.c:155:20: error: ‘Node’ has no member named ‘nodoABorrar’
+  155 |     lista->current ->nodoABorrar->next;
+      |                    ^~
+list.c:134:11: error: unused variable ‘nodoAEliminar’ [-Werror=unused-variable]
+  134 |     Node *nodoAEliminar = lista->current;
+      |           ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+cab6144
