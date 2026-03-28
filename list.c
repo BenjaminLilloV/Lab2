@@ -152,7 +152,7 @@ void * popCurrent(List * lista) {
         nodoABorrar->next->prev = nodoABorrar->prev;
     }
     
-    lista->current ->nodoABorrar->next;
+    lista->current->nodoABorrar->next;
     free(nodoABorrar);
     return dataEliminada;
         
