@@ -661,3 +661,9 @@ list.c:155:19: error: ‘Node’ has no member named ‘nodoABorrar’
   155 |     lista->current->nodoABorrar->next;
       |                   ^~
 c759bda
+Sat Mar 28 06:16:25 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|0
+total_score: 60/60
+41c38a6
