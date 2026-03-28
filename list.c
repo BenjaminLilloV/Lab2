@@ -80,7 +80,14 @@ void * prevList(List * lista) {
 // 4. Programe la función void pushFront(List * list, void * data), la cual agrega un dato al comienzo de la lista.
 // Puede utilizar la función Node* createNode(void * data) la cual crea, incializa y retorna un nodo con el dato correspondiente.
 
-void pushFront(List * list, void * data) {
+void pushFront(List * lista, void * data) {
+    Node* newNodo = (Node*) malloc(sizeof(Node));
+    newNodo->data = data;
+    newNodo->next = lista->head;
+    lista->head->prev = newNodo;
+    lista->head = newNodo;
+    
+    
 }
 
 void pushBack(List * list, void * data) {
@@ -90,7 +97,14 @@ void pushBack(List * list, void * data) {
 
 // 5. Programe la función void pushCurrent(List * list, void* data), la cual agrega un dato a continuación del nodo apuntado por list->current.
 
-void pushCurrent(List * list, void * data) {
+void pushCurrent(List * lista, void * data) {
+    Node* newNodo = (Node*) malloc(sizeof(Node));
+    newNodo->data = data;
+    newNodo->prev = lista->current;
+    newNodo->next = lista->current->next;
+    lista->current->next->prev = newNodo;
+    lista->current->next = newNodo;
+    
 }
 
 void * popFront(List * list) {
