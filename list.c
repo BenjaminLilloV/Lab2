@@ -133,10 +133,10 @@ void * popCurrent(List * lista) {
     void * data = lista->current->data;
 
     if(izquierda != NULL)izquierda->next = derecha;
-    else popfront(lista);
+    else popFront(lista);
     if(derecha != NULL)derecha->prev = izquierda;
     else {
-        popback(lista);
+        popBack(lista);
         lista->current=NULL;
     }
     lista->current = derecha;
