@@ -128,7 +128,7 @@ void * popBack(List * list) {
 
 void * popCurrent(List * lista) {
     
-    if(lista->current == list->head)  popfront(lista);
+    if(lista->current == list->head)  popFront(lista);
     if(lista->current == list->tail) popBack(lista);
 
     else{
@@ -140,7 +140,7 @@ void * popCurrent(List * lista) {
 
     }
     void *dataEliminada = lista->current->data;
-    free(list->current)
+    free(list->current);
     lista->current = lista->current-next;
    
         
