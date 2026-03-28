@@ -452,3 +452,18 @@ Sat Mar 28 05:33:18 PM UTC 2026:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 05c17b4
+Sat Mar 28 05:39:08 PM UTC 2026: 
+ list.c | 18 ++++++++++++------
+ 1 file changed, 12 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:136:10: error: implicit declaration of function ‘popfront’; did you mean ‘popFront’? [-Wimplicit-function-declaration]
+  136 |     else popfront(lista);
+      |          ^~~~~~~~
+      |          popFront
+list.c:139:9: error: implicit declaration of function ‘popback’; did you mean ‘popBack’? [-Wimplicit-function-declaration]
+  139 |         popback(lista);
+      |         ^~~~~~~
+      |         popBack
+8b5a334
