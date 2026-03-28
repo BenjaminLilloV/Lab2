@@ -130,7 +130,7 @@ void * popCurrent(List * list) {
     Node* izquierda = list->current->prev;
     Node* derecha = list->current->next;
 
-    izquierda->next = derecha;
+    if(izquierda->next)izquierda->next = derecha;
     derecha->prev = izquierda;
     void * data = list->current->data;
     free(list->current);
