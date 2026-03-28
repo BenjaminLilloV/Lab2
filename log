@@ -538,3 +538,15 @@ list.c:144:37: error: ‘next’ undeclared (first use in this function)
   144 |     lista->current = lista->current-next;
       |                                     ^~~~
 421a91d
+Sat Mar 28 05:54:20 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:131:26: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+  131 |     if(lista->current == list->head)  popFront(lista);
+      |                          ^~~~
+      |                          List
+list.c:131:26: note: each undeclared identifier is reported only once for each function it appears in
+c3a6286
