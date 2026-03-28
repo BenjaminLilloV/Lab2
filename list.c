@@ -128,8 +128,8 @@ void * popBack(List * list) {
 
 void * popCurrent(List * lista) {
     
-    if(lista->current == list->head)  popFront(lista);
-    if(lista->current == list->tail) popBack(lista);
+    if(lista->current == lista->head)  popFront(lista);
+    if(lista->current == lista->tail) popBack(lista);
 
     else{
         Node* izquierda = lista->current->prev;
