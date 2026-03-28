@@ -132,9 +132,10 @@ void * popCurrent(List * list) {
 
     izquierda->next = derecha;
     derecha->prev = izquierda;
-
+    void * data = list->current->data;
     free(list->current);
     list->current = derecha;
+    return data;
         
 }
 
